@@ -1,0 +1,15 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "node.js to read from AWS DynamoDB Table",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aaron yoon",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.585.0",
+    "claudia": "^5.11.0"
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <meta charset = 'UTF-8' />
+        <link rel="stylesheet" type = "text/css" href="login.css">
+    </head>
+    <body>
+        <video id = "videobg" autoplay muted loop src="/pictures/cloud_video.mp4" type = "video/mp4"></video>
+        <div class="loginbox">
+            <div>
+                <h1 align="center">Weather</h1>
+            </div>
+            <div class = "information">
+                <div id = "leftside">
+                    <h2 align="center">Login Here</h2>
+                    <form>
+                        <p>Email Address</p>
+                        <input type = "text" placeholder = "Enter Email Address" id = "EMAIL" />
+                        <p>Password</p>
+                        <input type = "password" placeholder = "Enter Password" id = "PASSWORD" /><br />
+                        <input align ="center" type = "button" value = "Login" id = "LOGINBTN" href = "home.html"/><br />
+                        <span id="ERRORTXT"></span>
+                    </form>
+                </div>
+                <div id = "rightside">
+                    <h2 align= "center">Sign Up</h2>
+                    <div class = information-right>
+                        <div id = "r1">
+                            <p>Email Address</p>
+                            <input type = "text1" placeholder = "Enter Email Address" id = "newEMAIL" />
+                            <p>Password</p>
+                            <input type = "password" placeholder = "Enter Password" id = "newPASSWORD" /><br />
+                        </div>
+                        <div id = "r2">
+                            <p>Name</p>
+                            <input type = "text1" placeholder = "Enter your name" id = "NAME" /><br />
+                            <p>City</p>
+                            <input type = "text1" placeholder = "Home city" id = "CITY" />
+                            </div>
+                    </div>
+                    <input align ="center" type = "button" value = "Submit" id = "SUBMITBTN"/><br />
+                </div>
+            </div>
+        </div>
+        <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+        <script src="/__/firebase/7.5.0/firebase-analytics.js"></script>
+        <script src="/__/firebase/7.5.0/firebase-auth.js"></script>
+        <script src="/__/firebase/7.5.0/firebase-database.js"></script>
+        <script src="/__/firebase/7.5.0/firebase-firestore.js"></script>
+        <script src="/__/firebase/init.js"></script>
+        <script src="/login.js"></script>
+        <script>
+            var vid = document.getElementById("videobg");
+            vid.playbackRate = 0.75;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+/* CSS for login.html */
+body{
+    margin: 0;
+    padding: 0;
+    background: url();      
+    background-size: cover;
+    font-family: sans-serif;
+    background: rgb(231, 231, 231);
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 700px;
+    height: 410px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform : translate(-50%, -50%);
+    box-sizing: border-box;
+}
+.loginbox input{
+    width: 80%;
+    margin-bottom: 20px;
+    border: white;
+}
+.loginbox input[type = "text"], input[type = "password"]{
+    /*
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    */
+    background: transparent;
+    color: yellow;
+    outline: none;
+    padding: 3px;
+}
+.loginbox input[type = "submit"] {
+    color: white;
+    width: 100%;
+}
+.information{
+    display: flex;
+}
+#leftside{
+    flex: 1;
+}
+#rightside{
+    flex: 1;
+}
+.information-right{
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+}
+
+.loginbox input[type = "text1"], input[type = "password1"]{
+    /*
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    */
+    background: transparent;
+    margin-bottom: 5px;
+    color: yellow;
+    outline: none;
+    padding: 3px;
+}
+#r1{
+    flex: 1;
+}
+#r2{
+    flex: 1;
+    padding: 10;
+}
+
+.imgcontainer {
+    right:15%;
+    margin: 24px 0 12px 0;
+}
+#videobg{
+    position:fixed;
+    z-index: -1;
+}
+/*
+@media (min-aspect-ratio: 16/9){
+    #videobg{
+        width: auto;
+        height: 100%;
+    }
+}
+@media (min-aspect-ratio: 16/9){
+    #videobg{
+        width: 100%;
+        height: auto;
+    }
+}
+*/

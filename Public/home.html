@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Weather</title>
+        <meta charset = 'UTF-8'>
+        <link rel = "stylesheet" type="text/css" href="home.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700&display=swap" rel="stylesheet">        
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.580.0.min.js"></script>
+    </head>
+    <body class = "forum-body" onload = "userInfo()" onload="startTime()">
+        <header class = "header">
+            <div class = "title">
+                <h2>The Weather - Raspberry Pi</h2>
+            </div> 
+            <div>
+                <input type = "button" value="Logout" id = "LOGOUTBTN"/>
+            </div>
+        </header>
+        <main>
+            <section class = "topbar">
+                <div class = userpage>
+                    <p align = "center" id="USERNAME">Welcome back user!</p><br>
+                </div>
+            </section>
+        </main>
+        <div class = "weatherinfo">
+            <video id = "videobg" autoplay muted loop src="/pictures/Fog.mp4" type = "video/mp4"></video>
+            <div id = "info1">
+                <h1 id = "city">Cupertino</h1>
+                <h2>United States</h2>
+                <h2><div id="clockbox"></div></h2>
+            </div>
+            <div id = "info2">
+                <h2>Foggy</h2>
+                <h2> | 66 up | 49 down |</h2>
+                <h2>Current Temperature: </h2> <h2 id = "temp">60 F</h2>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        
+        function GetClock(){
+        var d=new Date();
+        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+        
+        if(nhour==0){ap=" AM";nhour=12;}
+        else if(nhour<12){ap=" AM";}
+        else if(nhour==12){ap=" PM";}
+        else if(nhour>12){ap=" PM";nhour-=12;}
+        
+        if(nmin<=9) nmin="0"+nmin;
+        if(nsec<=9) nsec="0"+nsec;
+        
+        var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+        document.getElementById('clockbox').innerHTML=clocktext;
+        }
+        
+        GetClock();
+        setInterval(GetClock,1000);
+    </script>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script>
+    <script src="/__/firebase/7.2.3/firebase-app.js"></script>
+    <script src="/__/firebase/7.2.3/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.2.3/firebase-auth.js"></script>
+    <script src="/__/firebase/7.2.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src = "home.js"></script>
+</html>
+
+<!-- Terms privacy policy cookies ads info -->
