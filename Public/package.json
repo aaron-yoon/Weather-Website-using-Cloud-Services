@@ -9,7 +9,7 @@
   "author": "aaron yoon",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.585.0",
+    "aws-sdk": "^2.814.0",
     "claudia": "^5.11.0"
   }
 }
